@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Sample HTML Page - test.html</title>
     <meta name="description" content="A simple responsive HTML template for D:/githubProject/test.html" />
+    <link rel="stylesheet" href="test.css" />
     <style>
         :root{
-            --bg:#f6f8fb;
-            --card:#ffffff;
-            --muted:#6b7280;
-            --accent:#2563eb;
-            --radius:12px;
-            --shadow: 0 6px 18px rgba(22,33,62,0.08);
+            --bg: #fff5f9;
+            --card: #fffbfd;
+            --primary: #ec4899;
+            --primary-600: #be185d;
+            --muted: #a78bba;
+            --accent: #f472b6;
+            --danger: #f87171;
+            --radius: 16px;
+            --shadow: 0 8px 24px rgba(236, 72, 153, 0.12);
         }
         *{box-sizing:border-box}
         html,body{height:100%}
         body{
             margin:0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background:linear-gradient(180deg,#eef2ff 0%, var(--bg) 70%);
-            color:#0f172a;
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, system-ui, Arial;
+            background:linear-gradient(180deg,#fce7f3 0%, var(--bg) 70%);
+            color:#6b4e71;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
-            line-height:1.45;
+            line-height:1.6;
             padding:24px;
         }
 
@@ -50,8 +54,8 @@
         .logo{
             width:44px;
             height:44px;
-            border-radius:10px;
-            background:linear-gradient(135deg,var(--accent),#7c3aed);
+            border-radius:12px;
+            background:linear-gradient(135deg,var(--primary),#f472b6);
             display:flex;
             align-items:center;
             justify-content:center;
@@ -67,7 +71,7 @@
             color:var(--muted);
             font-weight:600;
         }
-        nav a:hover{color:var(--accent)}
+        nav a:hover{color:var(--primary)}
 
         .hero{
             background:var(--card);
@@ -83,34 +87,44 @@
         .hero h1{
             margin:0 0 8px 0;
             font-size: clamp(20px, 3vw, 28px);
+            color:#c71585;
         }
         .hero p{margin:0 0 16px 0; color:var(--muted)}
         .btn{
             display:inline-block;
-            background:var(--accent);
+            background:var(--primary);
             color:#fff;
             padding:10px 14px;
-            border-radius:10px;
+            border-radius:12px;
             text-decoration:none;
             font-weight:600;
-            box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15);
+        }
+        .btn:hover{
+            background:var(--primary-600);
         }
         .card{
-            background:linear-gradient(180deg,#ffffff,#fbfdff);
-            border-radius:12px;
+            background:var(--card);
+            border-radius:16px;
             padding:16px;
             box-shadow:var(--shadow);
+            border:1px solid rgba(236,72,153,0.08);
         }
 
         form label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
         input[type="text"], input[type="email"], textarea{
             width:100%;
             padding:10px 12px;
-            border-radius:8px;
-            border:1px solid #e6e9f0;
-            background:transparent;
+            border-radius:10px;
+            border:1px solid rgba(236,72,153,0.15);
+            background:rgba(255,240,245,0.5);
             font-size:14px;
             margin-bottom:12px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+            border-color:rgba(236,72,153,0.6);
+            box-shadow:0 6px 18px rgba(236,72,153,0.1);
+            outline:none;
         }
         textarea{min-height:90px; resize:vertical}
 
@@ -122,9 +136,13 @@
         }
         .feature{
             background:var(--card);
-            border-radius:10px;
+            border-radius:12px;
             padding:14px;
-            box-shadow:0 8px 20px rgba(12,18,36,0.04);
+            box-shadow:var(--shadow);
+            border:1px solid rgba(236,72,153,0.08);
+        }
+        .feature strong{
+            color:#ec4899;
         }
         footer{
             margin-top:24px;
@@ -142,44 +160,44 @@
     <div class="container">
         <header>
             <a class="brand" href="#" aria-label="Home">
-                <div class="logo">GP</div>
+                <div class="logo">✨</div>
                 <div>
-                    <div style="font-weight:700">Project</div>
-                    <div style="font-size:12px;color:var(--muted)">A small starter page</div>
+                    <div style="font-weight:700">Girly Project</div>
+                    <div style="font-size:12px;color:var(--muted)">A cute starter page</div>
                 </div>
             </a>
             <nav aria-label="Main navigation">
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
-                <a href="#" id="toggleTheme" title="Toggle visual">Toggle</a>
+                <a href="#features">✨ Features</a>
+                <a href="#contact">💌 Contact</a>
+                <a href="#" id="toggleTheme" title="Toggle visual">🌙 Toggle</a>
             </nav>
         </header>
 
         <main>
             <section class="hero" aria-labelledby="hero-title">
                 <div>
-                    <h1 id="hero-title">Simple, accessible HTML starter</h1>
-                    <p>Use this file as a minimal, responsive template to begin building pages. It includes a hero, features, and a contact form with basic validation.</p>
-                    <a class="btn" href="#contact">Get in touch</a>
+                    <h1 id="hero-title">✨ Simple, Gorgeous HTML Starter 💖</h1>
+                    <p>Use this file as a minimal, responsive template to begin building amazing pages. It includes a hero, features, and a contact form with basic validation.</p>
+                    <a class="btn" href="#contact">💬 Get in touch</a>
 
                     <div class="features" id="features" style="margin-top:18px">
                         <div class="feature">
-                            <strong>Responsive</strong>
+                            <strong>📱 Responsive</strong>
                             <div style="color:var(--muted); font-size:13px">Adapts to different screen sizes using CSS grid and media queries.</div>
                         </div>
                         <div class="feature">
-                            <strong>Accessible</strong>
+                            <strong>♿ Accessible</strong>
                             <div style="color:var(--muted); font-size:13px">Semantic tags, labels, and focusable elements for assistive tech.</div>
                         </div>
                         <div class="feature">
-                            <strong>Customizable</strong>
+                            <strong>🎨 Customizable</strong>
                             <div style="color:var(--muted); font-size:13px">Drop-in styles you can extend or replace quickly.</div>
                         </div>
                     </div>
                 </div>
 
                 <aside class="card" aria-labelledby="contact-title" id="contact">
-                    <h3 id="contact-title" style="margin-top:0">Contact</h3>
+                    <h3 id="contact-title" style="margin-top:0">💌 Contact</h3>
                     <form id="contactForm" novalidate>
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -190,7 +208,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Brief message" required></textarea>
 
-                        <button class="btn" type="submit" style="width:100%">Send</button>
+                        <button class="btn" type="submit" style="width:100%">💕 Send</button>
                         <div id="formStatus" role="status" aria-live="polite" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
                     </form>
                 </aside>
@@ -198,7 +216,7 @@
         </main>
 
         <footer>
-            <div>© <span id="year"></span> Sample project — Built with a minimal template.</div>
+            <div>✨ © <span id="year"></span> Girly Project — Built with love 💖 ✨</div>
         </footer>
     </div>
 
@@ -242,17 +260,19 @@
             e.preventDefault();
             dark = !dark;
             if (dark) {
-                document.documentElement.style.setProperty('--bg','#0b1220');
-                document.documentElement.style.setProperty('--card','#071027');
-                document.documentElement.style.setProperty('--muted','#9aa6bf');
-                document.documentElement.style.setProperty('--accent','#4f46e5');
-                document.body.style.background = 'linear-gradient(180deg,#071027 0%, #061428 70%)';
-                document.body.style.color = '#e6eef9';
+                document.documentElement.style.setProperty('--bg','#4a2c5e');
+                document.documentElement.style.setProperty('--card','#3a1f4f');
+                document.documentElement.style.setProperty('--muted','#d4b5d9');
+                document.documentElement.style.setProperty('--primary','#f472b6');
+                document.documentElement.style.setProperty('--primary-600','#f91b7f');
+                document.body.style.background = 'linear-gradient(180deg,#3a1f4f 0%, #4a2c5e 70%)';
+                document.body.style.color = '#f3e8f7';
             } else {
                 document.documentElement.style.removeProperty('--bg');
                 document.documentElement.style.removeProperty('--card');
                 document.documentElement.style.removeProperty('--muted');
-                document.documentElement.style.removeProperty('--accent');
+                document.documentElement.style.removeProperty('--primary');
+                document.documentElement.style.removeProperty('--primary-600');
                 document.body.style.background = '';
                 document.body.style.color = '';
             }
